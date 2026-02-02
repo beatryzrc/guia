@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Semanal Espiritual | Profissional</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --terracota: #E2725B;
+            --bg-color: #FAFAFA;
+            
+            /* Cores dos Dias */
+            --segunda: #4A6FA5; --terca: #D66D75; --quarta: #6B9080;  
+            --quinta: #B5651D; --sexta: #A0A0A0; --sabado: #89C2D9; --domingo: #E9C46A; 
+        }
+
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23E2725B" stroke-width="2"><circle cx="12" cy="12" r="8" fill="%23E2725B" fill-opacity="0.6"/></svg>'), auto;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: #333;
+            font-family: 'Outfit', sans-serif;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #1a1a1a;
+        }
+
+        h1 span { color: var(--terracota); font-style: italic; }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .card { height: 500px; perspective: 1000px; }
+        .card-inner {
+            position: relative; width: 100%; height: 100%;
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+        .card:hover .card-inner { transform: rotateY(180deg); }
+
+        .front, .back {
+            position: absolute; width: 100%; height: 100%;
+            backface-visibility: hidden; border-radius: 24px;
+            padding: 30px; display: flex; flex-direction: column;
+            border: 1px solid rgba(0,0,0,0.03); background: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+
+        .back { transform: rotateY(180deg); color: white; justify-content: center; }
+
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
+        .day-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: #888; font-weight: 600; }
+        .entities { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 600; color: #222; }
+
+        .icon {
+            width: 40px; height: 40px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            border: 2px solid currentColor; font-size: 1.2rem;
+        }
+
+        .prayer { font-size: 0.98rem; line-height: 1.7; font-weight: 300; color: #444; font-style: italic; }
+        .prayer strong { display: block; margin-top: 12px; font-weight: 600; font-style: normal; color: var(--terracota); }
+
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+        .tag { font-size: 0.75rem; padding: 5px 12px; border-radius: 20px; background: #f4f4f4; color: #555; }
+
+        .back h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 10px; }
+        .fundamento { margin-bottom: 20px; }
+        .fundamento label { display: block; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.8; margin-bottom: 5px; font-weight: 600; }
+        .fundamento p { font-size: 1rem; font-weight: 400; }
+
+        .segunda .icon { color: var(--segunda); } .segunda .back { background: var(--segunda); }
+        .terca .icon { color: var(--terca); } .terca .back { background: var(--terca); }
+        .quarta .icon { color: var(--quarta); } .quarta .back { background: var(--quarta); }
+        .quinta .icon { color: var(--quinta); } .quinta .back { background: var(--quinta); }
+        .sexta .icon { color: var(--sexta); } .sexta .back { background: var(--sexta); }
+        .sabado .icon { color: var(--sabado); } .sabado .back { background: var(--sabado); }
+        .domingo .icon { color: var(--domingo); } .domingo .back { background: var(--domingo); }
+
+        @media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <h1>Orações <span>Semanais</span></h1>
+
+    <div class="container">
+        
+        <div class="card segunda">
+            <div class="card-inner">
+                <div class="front">
+                    <div class="card-header">
+                        <div><div class="day-title">Segunda-feira</div><div class="entities">Ogum & Miguel</div></div>
+                        <div class="icon">⚔️</div>
+                    </div>
+                    <p class="prayer">
+                        “Arcanjo Miguel, guerreiro da luz divina, na força de Ogum, abre meus caminhos e corta toda demanda visível e invisível. Firma meu corpo, minha mente e meu espírito, para que eu caminhe protegida, com coragem e fé.
+                        <strong>Que assim seja, axé.</strong>
+                    </p>
+                    <div class="tags"><span class="tag">Proteção</span><span class="tag">Abertura</span></div>
+                </div>
+                <div class="back">
+                    <h3>Fundamentos</h3>
+                    <div class="fundamento"><label>Cor</label><p>Azul Profundo ou Branco</p></div>
+                    <div class="fundamento"><label>Erva</label><p>Espada de São Jorge / Aroeira</p></div>
+                    <div class="fundamento"><label>Firmeza</label><p>Corte de demandas e proteção ativa.</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card terca">
+            <div class="card-inner">
+                <div class="front">
+                    <div class="card-header">
+                        <div><div class="day-title">Terça-feira</div><div class="entities">Iansã & Gabriel</div></div>
+                        <div class="icon">⚡</div>
+                    </div>
+                    <p class="prayer">
+                        “Arcanjo Gabriel, mensageiro da criação, na vibração de Iansã, move o que está parado em minha vida. Clareia minha palavra, traz verdade aos meus caminhos e direciona minhas escolhas.
+                        <strong>Que assim seja, axé.</strong>
+                    </p>
+                    <div class="tags"><span class="tag">Movimento</span><span class="tag">Verdade</span></div>
+                </div>
+                <div class="back">
+                    <h3>Fundamentos</h3>
+                    <div class="fundamento"><label>Cor</label><p>Vermelho ou Amarelo</p></div>
+                    <div class="fundamento"><label>Erva</label><p>Pinhão Roxo / Bambu</p></div>
+                    <div class="fundamento"><label>Firmeza</label><p>Clareza nas decisões e novos ventos.</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card quarta">
+            <div class="card-inner">
+                <div class="front">
+                    <div class="card-header">
+                        <div><div class="day-title">Quarta-feira</div><div class="entities">Oxóssi & Rafael</div></div>
+                        <div class="icon">🌿</div>
+                    </div>
+                    <p class="prayer">
+                        “Arcanjo Rafael, médico da alma, na força de Oxóssi, derrama tua cura sobre meu corpo, minha mente e meu espírito. Equilibra meus caminhos, renova minhas forças e guia-me pela estrada da saúde e da paz.
+                        <strong>Que assim seja, axé.</strong>
+                    </p>
+                    <div class="tags"><span class="tag">Cura</span><span class="tag">Fartura</span></div>
+                </div>
+                <div class="back">
+                    <h3>Fundamentos</h3>
+                    <div class="fundamento"><label>Cor</label><p>Verde</p></div>
+                    <div class="fundamento"><label>Erva</label><p>Alecrim / Guiné / Samambaia</p></div>
+                    <div class="fundamento"><label>Firmeza</label><p>Equilíbrio emocional e prosperidade.</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card quinta">
+            <div class="card-inner">
+                <div class="front">
+                    <div class="card-header">
+                        <div><div class="day-title">Quinta-feira</div><div class="entities">Xangô & Uriel</div></div>
+                        <div class="icon">🔥</div>
+                    </div>
+                    <p class="prayer">
+                        “Arcanjo Uriel, chama da verdade divina, na justiça de Xangô, ilumina minhas decisões e fortalece meu discernimento. Que eu colha somente o fruto correto das escolhas feitas com consciência e retidão.
+                        <strong>Que assim seja, axé.</strong>
+                    </p>
+                    <div class="tags"><span class="tag">Justiça</span><span class="tag">Sabedoria</span></div>
+                </div>
+                <div class="back">
+                    <h3>Fundamentos</h3>
+                    <div class="fundamento"><label>Cor</label><p>Marrom ou Roxo</p></div>
+                    <div class="fundamento"><label>Erva</label><p>Levante / Quebra-pedra</p></div>
+                    <div class="fundamento"><label>Firmeza</label><p>Justiça divina e equilíbrio kármico.</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card sexta">
+            <div class="card-inner">
+                <div class="front">
+                    <div class="card-header">
+                        <div><div class="day-title">Sexta-feira</div><div class="entities">Oxalá & Zadkiel</div></div>
+                        <div class="icon">🕊️</div>
+                    </div>
+                    <p class="prayer">
+                        “Arcanjo Zadkiel, luz da misericórdia divina, na paz de Oxalá, transmuta toda dor, culpa e peso do passado. Ensina-me o perdão, traz leveza ao meu espírito e eleva meus pensamentos à luz maior.
+                        <strong>Que assim seja, axé.</strong>
+                    </p>
+                    <div class="tags"><span class="tag">Paz</span><span class="tag">Elevação</span></div>
+                </div>
+                <div class="back">
+                    <h3>Fundamentos</h3>
+                    <div class="fundamento"><label>Cor</label><p>Branco</p></div>
+                    <div class="fundamento"><label>Erva</label><p>Manjericão / Tapete de Oxalá</p></div>
+                    <div class="fundamento"><label>Firmeza</label><p>Paz absoluta e renovação da fé.</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card sabado">
+            <div class="card-inner">
+                <div class="front">
+                    <div class="card-header">
+                        <div><div class="day-title">Sábado</div><div class="entities">Iemanjá & Chamuel</div></div>
+                        <div class="icon">🌊</div>
+                    </div>
+                    <p class="prayer">
+                        “Arcanjo Chamuel, guardião do amor divino, nas águas de Iemanjá, traz paz ao meu coração e harmonia às minhas relações. Acolhe minhas emoções, cura minhas dores afetivas e envolve minha vida em amor.
+                        <strong>Que assim seja, axé.</strong>
+                    </p>
+                    <div class="tags"><span class="tag">Amor</span><span class="tag">Harmonia</span></div>
+                </div>
+                <div class="back">
+                    <h3>Fundamentos</h3>
+                    <div class="fundamento"><label>Cor</label><p>Azul Claro ou Rosa</p></div>
+                    <div class="fundamento"><label>Erva</label><p>Alfazema / Pata de Vaca</p></div>
+                    <div class="fundamento"><label>Firmeza</label><p>Conexão materna e nutrição emocional.</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card domingo">
+            <div class="card-inner">
+                <div class="front">
+                    <div class="card-header">
+                        <div><div class="day-title">Domingo</div><div class="entities">Oxum & Jofiel</div></div>
+                        <div class="icon">✨</div>
+                    </div>
+                    <p class="prayer">
+                        “Arcanjo Jofiel, luz da sabedoria e da beleza, na doçura de Oxum, purifica meus pensamentos e fortalece meu amor-próprio. Que eu enxergue a vida com gratidão, sensibilidade e alegria.
+                        <strong>Que assim seja, axé.</strong>
+                    </p>
+                    <div class="tags"><span class="tag">Ouro</span><span class="tag">Beleza</span></div>
+                </div>
+                <div class="back">
+                    <h3>Fundamentos</h3>
+                    <div class="fundamento"><label>Cor</label><p>Dourado ou Amarelo</p></div>
+                    <div class="fundamento"><label>Erva</label><p>Calêndula / Camomila / Erva-doce</p></div>
+                    <div class="fundamento"><label>Firmeza</label><p>Autoestima e prosperidade financeira.</p></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
