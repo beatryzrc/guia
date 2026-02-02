@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia Semanal Espiritual | Profissional</title>
+    <title>Guia | Orações da Semana</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E2725B'><path d='M12 2L14.5 9.5H22L16 14L18.5 21.5L12 17L5.5 21.5L8 14L2 9.5H9.5L12 2Z'/></svg>">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +23,6 @@
 
         * {
             margin: 0; padding: 0; box-sizing: border-box;
-            /* Cursor Terracota com borda branca para não sumir no mesmo tom */
             cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="12" cy="12" r="8" fill="%23E2725B"/></svg>'), auto;
         }
 
@@ -42,7 +43,6 @@
 
         h1 span { color: var(--terracota); font-style: italic; }
 
-        /* Container Flex para centralizar a última linha */
         .container {
             display: flex;
             flex-wrap: wrap;
@@ -53,7 +53,7 @@
         }
 
         .card { 
-            flex: 0 1 320px; /* Largura base do card */
+            flex: 0 1 320px;
             height: 520px; 
             perspective: 1000px; 
         }
@@ -109,10 +109,9 @@
 </head>
 <body>
 
-    <h1>Semana <span>Espiritual</span></h1>
+    <h1>Orações <span>dos Arcanjos</span></h1>
 
     <div class="container">
-        
         <div class="card segunda">
             <div class="card-inner">
                 <div class="front">
@@ -266,7 +265,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
 </body>
