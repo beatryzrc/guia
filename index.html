@@ -21,7 +21,8 @@
 
         * {
             margin: 0; padding: 0; box-sizing: border-box;
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23E2725B" stroke-width="2"><circle cx="12" cy="12" r="8" fill="%23E2725B" fill-opacity="0.6"/></svg>'), auto;
+            /* Cursor Terracota com borda branca para não sumir no mesmo tom */
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="12" cy="12" r="8" fill="%23E2725B"/></svg>'), auto;
         }
 
         body {
@@ -41,15 +42,22 @@
 
         h1 span { color: var(--terracota); font-style: italic; }
 
+        /* Container Flex para centralizar a última linha */
         .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 25px;
             max-width: 1400px;
             margin: 0 auto;
         }
 
-        .card { height: 500px; perspective: 1000px; }
+        .card { 
+            flex: 0 1 320px; /* Largura base do card */
+            height: 520px; 
+            perspective: 1000px; 
+        }
+
         .card-inner {
             position: relative; width: 100%; height: 100%;
             transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
@@ -96,12 +104,12 @@
         .sabado .icon { color: var(--sabado); } .sabado .back { background: var(--sabado); }
         .domingo .icon { color: var(--domingo); } .domingo .back { background: var(--domingo); }
 
-        @media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { .card { flex: 0 1 100%; } }
     </style>
 </head>
 <body>
 
-    <h1>Orações <span>Semanais</span></h1>
+    <h1>Semana <span>Espiritual</span></h1>
 
     <div class="container">
         
